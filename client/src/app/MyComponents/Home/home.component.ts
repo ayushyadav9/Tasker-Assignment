@@ -59,6 +59,11 @@ export class HomeComponent implements OnInit {
       console.log(error)
     })
   }
+  
+  logout(){
+    localStorage.removeItem("userToken");
+    window.location.reload()
+  }
 
   ngOnInit(): void {}
 }
