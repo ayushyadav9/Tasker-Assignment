@@ -10,7 +10,7 @@
 
 1. Clone the client repository 
    ```sh
-   git clone https://github.com/ayushyadav9/GALK-lab-assignment
+   git clone https://github.com/ayushyadav9/Tasker-Assignment
    ```
 2. Go to Backend and Client folder and install all npm packages
     ```sh
