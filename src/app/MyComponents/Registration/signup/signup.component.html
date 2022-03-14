@@ -1,0 +1,17 @@
+<div class="login-form">    
+    <form (ngSubmit)="onSubmit()">
+		<div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+    	<h4 class="modal-title">Create a new Account</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="Name" required="required">
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password" required="required">
+        </div>
+        <input type="submit" class="btn btn-primary btn-block btn-lg" value="Submit">              
+    </form>			
+    <div class="text-center small">Already have an account? <a routerLink="/login">Log In</a></div>
+</div>

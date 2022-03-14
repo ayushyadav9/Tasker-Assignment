@@ -1,0 +1,29 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Share the Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="email" [(ngModel)]="shareEmail" class="form-control" placeholder="Email" aria-label="Email">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="onShare()">Share</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem; margin-top:15px; margin-bottom: 15px; margin-left: 15px;">
+    <div class="card-body">
+      <div style="display: flex; justify-content: space-between;">
+      <h5 class="card-title">{{task.title}}</h5>
+      <div data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share-fill" viewBox="0 0 16 16">
+        <path d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z"/>
+      </svg></div>
+    </div>
+      <p class="card-text">{{task.desc}}</p>
+    </div>
+  </div>

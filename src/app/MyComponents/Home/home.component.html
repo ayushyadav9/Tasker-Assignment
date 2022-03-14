@@ -1,0 +1,45 @@
+<div style="display: flex; justify-content: space-between; width: 70%; margin: 50px auto;">
+    <h3><span style="font-size:large;">Hello,</span> {{User}}</h3>
+    <button class="btn btn-primary">Logout</button>
+</div>
+<div style="display: flex; justify-content: center;">
+    <div class="card" style="width: 70%; margin-bottom: 15px;">
+        <div class="card-body">
+            <h5 class="card-title m-2">Add a Task</h5>
+            <form class="m-5" (ngSubmit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Title</label>
+                    <input type="text" class="form-control" name="title" [(ngModel)]="title" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Task Description</label>
+                    <textarea type="text" class="form-control" name="description" [(ngModel)]="description"
+                        id="exampleInputPassword1"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div style="display: flex; justify-content: center;">
+    <div class="card" style="width: 70%; margin-bottom: 15px;">
+        <h5 class="card-title m-4">Your Tasks</h5>
+        <div style="display: flex; flex-wrap: wrap;">
+            <div *ngFor="let task of Tasks">
+                <app-todo [task]="task"></app-todo>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display: flex; justify-content: center;">
+    <div class="card" style="width: 70%; margin-bottom: 15px;">
+        <h5 class="card-title m-4">Requested Tasks</h5>
+        <div style="display: flex; flex-wrap: wrap;">
+            <div *ngFor="let task of PendingTasks">
+                <app-pending-todo [task]="task"></app-pending-todo>
+            </div>
+        </div>
+    </div>
+</div>

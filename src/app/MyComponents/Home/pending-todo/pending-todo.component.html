@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem; margin-top:15px; margin-bottom: 15px; margin-left: 15px; overflow-y: hidden;">
+  <div class="card-body">
+    <div style="display: flex; justify-content: space-between;">
+      <h5 class="card-title">{{task.title}}</h5>
+    </div>
+    <p class="card-text">{{task.desc}}</p>
+    <div style="display: flex; justify-content: space-around;">
+      <button (click)="onAccept()" class="btn btn-outline-primary">Accept</button>
+      <button (click)="onReject()" class="btn btn-outline-danger">Reject</button>
+    </div>
+  </div>
+</div>

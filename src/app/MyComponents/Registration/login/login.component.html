@@ -1,0 +1,14 @@
+<div class="login-form">    
+    <form (ngSubmit)="onSubmit()">
+		<div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
+    	<h4 class="modal-title">Login to Your Account</h4>
+        <div class="form-group">
+            <input type="text" class="form-control" name="email" [(ngModel)]="email" placeholder="Email" required="required">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Password" required="required">
+        </div>
+        <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">              
+    </form>			
+    <div class="text-center small">Don't have an account? <a routerLink="/signUp">Sign up</a></div>
+</div>
